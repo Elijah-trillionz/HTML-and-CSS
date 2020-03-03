@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+row:after { /*To make a responsive grid view */
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] { /* To style all classes with the value col- */
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+body {
+    text-align: center;
+    background-image: url(laptop.jpg);
+    background-size: cover;
+}
+
+img {
+    border-radius: 40px;
+}
+
+fieldset {
+    margin: 7px;
+    padding: 6px 11px;
+    border-radius: 10px;
+    background: rgba(0,0,0,.9);
+}
+samp {
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {  
+    color: red; /*Transforms the color to red when moused over */
+    text-decoration: underline; /*Makes a decoration for the link when moused over*/
+}
+
+label {
+    color: white;
+    position: relative;
+    right: 90px;
+}
+
+input[id*="a"] {  /* To style all inputs with an id value of a */
+    width: 270px;
+    padding: 12px 16px;
+    border: none;
+    border-bottom: 1.6px solid #3caf51;
+    margin: 6px 10px;
+    color: white;
+    background: rgba(0,0,0,.1);
+}
+
+input[id*="a"]:focus {  /* To style all inputs with an id value of a */
+    outline: none;
+    border-bottom: 2px solid red;
+    -webkit-transition: width 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+} 
+
+input[type="submit"] {
+    width: 220px;
+    background: rgb(225,10,29);
+    border: 1px solid rgb(225,10,29);
+    padding: 11px 15px;
+    margin: 6px 10px;
+    color: white;
+    border-radius: 45px;
+}
+
+input[type="submit"]:hover { /*Styling the submit button when moused over */
+    -webkit-box-shadow: 1px 1px 2px #ccc; /* For Chrome and safari */
+    -moz-box-shadow: 1px 1px 2px #ccc;  /* For firefox */ 
+} /*Learn more CSS3 at w3schools */
+
+input[type="submit"]:focus {
+    outline: none;
+}
+
+@media only screen and (max-width:968px) {
+    fieldset {left: 34px;}
+}
+@media only screen and (min-width:501px) {
+ .col-1 {width: 8.33%;}
+ .col-2 {width: 16.66%;}
+ .col-3 {width: 25%;}
+ .col-4 {width: 33.33%;}
+ .col-5 {width: 31.66%;}
+ .col-6 {width: 50%;}
+ .col-7 {width: 58.33%;}
+ .col-8 {width: 66.66%;}
+ .col-9 {width: 75%;}
+ .col-10 {width: 83.33%;}
+ .col-11 {width: 91.66%;}
+ .col-12 {width: 100%;} 
+} /* Attributing diff. width to diff. classes of columns to make a grid view..
+Learn more @ onlinedailyblog.com/sourcecodes */
